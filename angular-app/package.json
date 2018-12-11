@@ -22,7 +22,15 @@
     },
     "private": true,
     "dependencies": {
-        "@eui/deps-base": "3.6.2"
+        "@eui/deps-base": "3.6.2",
+        "browser-process-hrtime": "1.0.0",
+        "rest": "^1.3.2",
+        "zipkin": "^0.11.1",
+        "zipkin-context-cls": "^0.11.0",
+        "zipkin-instrumentation-cujojs-rest": "^0.11.1",
+        "zipkin-instrumentation-express": "^0.11.1",
+        "zipkin-instrumentation-fetch": "^0.11.1",
+        "zipkin-transport-http": "^0.11.1"
     },
     "devDependencies": {
         "@angular/cli": "1.7.4",

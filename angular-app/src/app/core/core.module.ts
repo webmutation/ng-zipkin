@@ -23,6 +23,7 @@ import { REDUCER_TOKEN, getReducers, metaReducers } from './reducers/index';
 import { SearchInputComponent } from './components/shell/search-input/search-input.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { ZipkinInterceptor } from './interceptors/zipkin.interceptor';
 
 @NgModule({
     imports: [
@@ -44,6 +45,11 @@ import { SharedModule } from '../shared/shared.module';
             provide: REDUCER_TOKEN,
             deps: [],
             useFactory: getReducers
+        },
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: ZipkinInterceptor,
+            multi: true,
         },
         {
             provide: HTTP_INTERCEPTORS,
