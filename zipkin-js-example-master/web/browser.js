@@ -9,7 +9,7 @@ import { recorder } from './recorder';
 import { Tracer, ExplicitContext } from 'zipkin';
 
 const ctxImpl = new ExplicitContext();
-const localServiceName = 'browser-DAN-KINGPIG';
+const localServiceName = 'browser';
 const tracer = new Tracer({ctxImpl, recorder, localServiceName});
 
 // instrument fetch
