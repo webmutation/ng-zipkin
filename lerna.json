@@ -1,0 +1,9 @@
+{
+  "lerna": "3.5.0",
+  "version": "0.15.0",
+  "command": {
+    "run": {
+      "npmClient": "yarn"
+    }
+  }
+}

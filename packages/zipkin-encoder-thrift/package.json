@@ -1,0 +1,31 @@
+{
+  "name": "zipkin-encoder-thrift",
+  "version": "0.15.0",
+  "description": "Encode a zipkin span to thrift",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "gen-thrift": "thrift -gen js:node -o src/ src/zipkinCore.thrift",
+    "prepublish": "npm run build",
+    "test": "mocha --exit --require ../../test/helper.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openzipkin/zipkin-js.git"
+  },
+  "author": "Openzipkin <openzipkin.alt@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/openzipkin/zipkin-js/issues"
+  },
+  "homepage": "https://github.com/openzipkin/zipkin-js#readme",
+  "dependencies": {
+    "thrift": "^0.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.1.5",
+    "@babel/core": "7.1.5",
+    "mocha": "^5.2.0",
+    "zipkin": "^0.15.0"
+  }
+}

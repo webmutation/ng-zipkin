@@ -1,0 +1,39 @@
+{
+  "name": "zipkin-instrumentation-request-promise",
+  "version": "0.15.0",
+  "description": "Instrumentation for request-promise with Zipkin.js",
+  "main": "lib/request.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "mocha --exit --require @babel/polyfill --require ../../test/helper.js",
+    "prepublish": "npm run build"
+  },
+  "author": "OpenZipkin <openzipkin.alt@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/openzipkin/zipkin-js",
+  "peerDependencies": {
+    "@types/request": "^2.0.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.1.5",
+    "@babel/core": "7.1.5",
+    "@babel/polyfill": "7.0.0",
+    "@babel/preset-es2015": "7.0.0-beta.53",
+    "@types/request": "^2.0.8",
+    "chai": "^4.0.2",
+    "co": "^4.6.0",
+    "co-mocha": "^1.2.1",
+    "express": "^4.13.4",
+    "mocha": "^5.2.0",
+    "nock": "^9.0.14",
+    "sinon": "^2.3.8",
+    "uuid": "^3.2.1",
+    "zipkin-context-cls": "^0.15.0"
+  },
+  "dependencies": {
+    "asap": "^2.0.6",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "zipkin": "^0.15.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "zipkin-instrumentation-restify",
+  "version": "0.15.0",
+  "description": "Restify middleware for instrumentation with Zipkin.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "mocha --exit --require ../../test/helper.js",
+    "prepublish": "npm run build"
+  },
+  "author": "OpenZipkin <openzipkin.alt@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/openzipkin/zipkin-js",
+  "devDependencies": {
+    "@babel/cli": "7.1.5",
+    "@babel/core": "7.1.5",
+    "mocha": "^5.2.0",
+    "node-fetch": "^1.5.3",
+    "restify": "^7.2.3",
+    "zipkin": "^0.15.0"
+  }
+}
